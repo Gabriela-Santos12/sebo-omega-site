@@ -1,0 +1,1020 @@
+:root{
+
+    /* FONTES */
+    --fonte-titulo: 'Playfair Display', serif;
+    --fonte-texto: 'Lato', sans-serif;
+
+    /* CORES */
+
+    --cor-fundo:#FAF7F2;
+    --cor-fundo-secundario:#F0EAE0;
+
+    --cor-verde:#1E4A2E;
+    --cor-verde-escuro:#14321F;
+    --cor-verde-claro:#2A6040;
+
+    --cor-marrom:#5C3D1E;
+    --cor-marrom-claro:#8B6239;
+
+    --cor-dourado:#C9A84C;
+    --cor-dourado-claro:#E8D5A0;
+    --cor-dourado-escuro:#A88A36;
+
+    --cor-preto:#1C1612;
+    --cor-preto-suave:#3A2E24;
+
+    --cor-texto:#1C1612;
+    --cor-texto-claro:#7A6A56;
+
+    --cor-branco:#FFFFFF;
+
+    --cor-borda:#D4C9B8;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    background:var(--cor-fundo-secundario);
+    color:var(--cor-texto);
+    font-family:var(--fonte-texto);
+
+}
+
+
+/* --------------------------------------HEADER------------------------------------ */
+
+/* --------------------------------------HEADER ------------------------------------ */
+
+header {
+    background: var(--cor-borda);
+    border-bottom: 5px solid var(--cor-dourado-escuro); /* Uma linha bem sutil para separar o menu do resto do site */
+    position: sticky;
+    top: 0;
+    z-index: 999; 
+    transition: all 0.3s ease;
+}
+
+/* Limitador de largura para alinhar com o restante do conteúdo do site */
+.header-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* LOGO MENU */
+.logo-area {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 190px; /* Tamanho reduzido para um menu mais elegante e moderno */
+    height: auto;
+    display: block;
+}
+
+/* MENU DE NAVEGAÇÃO */
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espaço ideal entre itens */
+    list-style: none;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: var(--cor-preto);
+    font-size: 19px;
+    font-weight: 500;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    position: relative;
+    padding: 8px 0;
+}
+
+/* Efeito de linha passando por baixo do link ao passar o mouse */
+.menu li a:not(.botaomenu)::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--cor-verde-claro);
+    transition: width 0.3s ease;
+}
+
+.menu li a:not(.botaomenu):hover::after {
+    width: 100%;
+}
+
+.menu li a:not(.botaomenu):hover {
+    color: var(--cor-verde-claro);
+}
+
+/* BOTÃO FALE CONOSCO (MENU) */
+.menu .botaomenu {
+    background-color: var(--cor-verde-claro);
+    color: var(--cor-branco);
+    padding: 10px 20px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.menu .botaomenu:hover {
+    background-color: var(--cor-verde-escuro);
+    color: var(--cor-branco);
+    transform: translateY(-1px); /* Leve efeito de elevação */
+}
+
+.menu .botaomenu:active {
+    transform: translateY(1px);
+}
+/*------------------------------------------------------------------------------*/
+/*BOTÕES HERO:*/
+.botaomenu{
+    background-color:var(--cor-verde-claro);
+  padding: 8px 16px;
+    border-radius: 4px;
+}
+.botoeshero{
+  
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    margin-top:40px;
+
+}
+.botao{
+
+   display: inline-block;
+    text-decoration: none;
+    font-size: 20px;
+    letter-spacing: 1px;
+      color: var(--cor-fundo-secundario);
+    padding: 10px 24px;
+    background-color:var(--cor-dourado-escuro);
+    border-radius: 50px;
+    font-weight: 600;
+    border:var(--cor-fundo-secundario);
+    box-shadow:var(--cor-dourado-claro);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* ---------------------------------HERO ------------------------------------------*/
+
+/*IMAGEM HERO*/
+  .hero{
+    min-height:700px;
+
+    background-image:
+        linear-gradient(
+            rgba(20,50,31,0.85),
+            rgba(20,50,31,0.35)
+        ),
+        url("img/livraria.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    align-items:center;
+}
+
+/*TEXTO HERO*/
+ .container{
+    width:100%;
+    text-align:center;
+}
+
+.tituloprincipal{
+  color:var(--cor-branco);
+  font-family:var(--fonte-texto);
+  font-size: 80px;
+  
+}
+
+.paragrafo{
+   color:var(--cor-branco);
+  font-family:var(--fonte-texto);
+  font-size: 20px;
+
+}
+.subtitulohero{
+  color:var(--cor-dourado-escuro);
+  font-family:var(--fonte-titulo);
+  font-size: 20px;
+ margin-left:40px ;
+ align-items: center;
+  
+}
+
+.tituloprincipalhero{
+  color:var(--cor-texto);
+  font-family:var(--fonte-titulo);
+  font-size: 50px;
+
+}
+.paragrafohero{
+   color:var(--cor-texto-claro);
+  font-family:var(--fonte-texto);
+  font-size: 20px;
+  line-height: 2;
+
+}
+/*--------------------------------MAIN----------------------------------------------*/
+
+/*----------------------------------section1:HISTORIA---------------------------*/
+.section-historia{
+ 
+  min-height: 700px;
+  max-width: 1200px; /* Alinhado com o padrão do seu site */
+  margin: 0 auto;    /* Centraliza a secção inteira na tela */
+  padding: 60px 20px;
+  
+  /* Ativa o Flexbox para colocar os blocos lado a lado */
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Alinha o texto e a imagem verticalmente ao centro */
+  gap: 50px; /* Cria um espaço elegante entre o texto e a imagem */
+  align-items: stretch;
+}
+
+.historia-texto {
+flex: 1; /* Dá um pouco mais de espaço para o texto respirar */}
+
+.historia-imagem{
+  flex: 1.5; /* Ajusta o tamanho da imagem proporcionalmente */
+  display: flex;
+  justify-content: center;
+  object-fit: cover;
+}
+
+.historia-imagem img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* Opcional: cantos arredondados na imagem para combinar com o card */
+  object-fit: cover;
+}
+
+/*-------------------------------section:vantagem---------------------------------------*/
+.section-vantagens {
+    background-color:var(--cor-texto);   /* Cor marrom suave (pode usar sua variável var(--cor-preto-suave)) */
+ 
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 80px 0;
+    background: var(--cor-preto);
+
+    display: flex;
+    flex-direction: column; /* coloca o texto em cima e os cards embaixo */
+    align-items: center;
+}
+
+.titulo-vantagens{
+    color:var(--cor-fundo-secundario);
+  font-family:var(--fonte-titulo);
+  font-size: 70px;
+text-align: center;}
+
+.paragrafo-vantagens{
+   color:var(--cor-branco);
+  font-family:var(--fonte-texto);
+  font-size: 20px;
+  line-height: 2;
+text-align:center;
+
+}
+.conteudo-vantagens {
+    max-width: 1200px;           /* Alinha a largura do texto com o resto do site */
+    margin: 0 auto;              /* Centraliza o conteúdo de texto no meio do fundo marrom */
+    padding: 0 20px;             /* Margem de segurança nas laterais */
+    color: var(--cor-branco);    /* Deixa o texto branco para dar contraste com o marrom */
+text-align: center;
+  }
+
+/*-----------------------------------CARDS-------------------------------------*/
+/*-------------------------------CARD-MISSÃO---------------------------------------*/
+
+.card-missao {
+background-color: var(--cor-verde-claro); 
+  color: var(--cor-fundo-secundario); 
+  padding: 30px; /* Aumentei um pouco o preenchimento para dar mais respiro */
+  border-radius: 4px; 
+  margin-top: 20px; /* Cria um espaçamento entre o texto de cima e o card */
+  
+  /* CORREÇÃO DO ALINHAMENTO INTERNO (Título em cima, texto embaixo) */
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start;}
+
+.card-missao h3 {
+  color: var(--cor-dourado);
+  font-size:30px;
+  font-weight: bold;
+  white-space: nowrap; /* Evita que "Nossa Missão" quebre em duas linhas */
+  margin: 0;
+}
+
+.card-missao p {
+  color:var(--cor-fundo-secundario);
+  font-size:25px;
+  font-style: italic;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/*-------------------------------CARD-VANTAGENS---------------------------------------*/
+
+.cards-vantagens{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+
+    width: 100%;
+    max-width: 1200px;
+
+    margin-top: 60px;
+}
+
+
+.card1{
+ background-color: var(--cor-branco);
+    color: var(--cor-fundo-secundario);
+
+    width: 250px;
+    height: 250px;
+
+    padding: 25px;
+    border-radius: 8px;
+    border: 2px solid #1E4A2E;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+        background: var(--cor-branco);
+    border:2px solid var(--cor-verde);
+
+    transition: all .3s ease;
+    cursor:pointer;
+
+}
+
+.card1:hover{
+    transform: scale(1.05);
+    box-shadow: 0 15px 35px rgba(0,0,0,.25);
+    background: #fffdf8;
+}
+
+.card1 h1 {
+  color: var(--cor-texto);
+  font-size:22px;
+  font-weight: bold;
+  white-space: nowrap; /* Evita que "Nossa Missão" quebre em duas linhas */
+  margin: 0;
+    margin-bottom:15px;
+}
+
+.card1 p {
+  color:var(--cor-texto-claro);
+  font-size:16px;
+  font-style: italic;
+  margin: 0;
+  line-height: 1.6;
+}
+
+
+/*-------------------------------CARD-DEPOIMENTOS---------------------------------------*/
+.cards-depo{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.carddepo{
+    width: 350px;
+    background: var(--cor-branco);
+    padding: 30px;
+    border-radius: 8px;
+    border: 2px solid var(--cor-verde);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    transition: .3s ease;
+}
+
+.carddepo:hover{
+    transform: scale(1.05);
+    box-shadow: 0 15px 35px rgba(0,0,0,.2);
+}
+
+.carddepo h1{
+    color: var(--cor-preto);
+    font-size: 16px;
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.carddepo h2{
+    color: var(--cor-texto-claro);
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 1.5;
+}
+/*-------------------------------CARD-galeria---------------------------------------*/
+/*--------------------------------------------------------------------------------*/
+/*-------------------------------section:DEPOIMENTOS---------------------------------------*/
+.section-depoimentos {
+    background-color:var(--cor-fundo);   /* Cor marrom suave (pode usar sua variável var(--cor-preto-suave)) */
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 80px 0;
+    display: flex;
+    flex-direction: column; /* coloca o texto em cima e os cards embaixo */
+    align-items: center;
+}
+
+.subtitulodepo{
+  color:var(--cor-dourado);
+  font-family:var(--fonte-titulo);
+  font-size: 20px;
+ margin-left:40px ;
+ align-items: center;
+}
+
+/*-------------------------------section:GALERIA---------------------------------------*/
+.section-galeria {
+    background-color:var(--cor-texto-claro);   /* Cor marrom suave (pode usar sua variável var(--cor-preto-suave)) */
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 80px 0;
+    display: flex;
+    flex-direction: column; /* coloca o texto em cima e os cards embaixo */
+    align-items: center;
+}
+
+.titulogaleria{
+  color:var(--cor-fundo-secundario);
+  font-family:var(--fonte-titulo);
+  font-size: 80px;
+ margin-left:40px ;
+ align-items: center;
+  
+}
+
+.subtitulogaleria{
+ color:var(--cor-dourado);
+  font-family:var(--fonte-titulo);
+  font-size: 30px;
+ margin-left:40px ;
+ text-align: center;
+}
+/*------------------------------------IMAGENS GALERIA---------------------*/
+.galeria{
+    background: var(--cor-fundo-secundario);
+    padding: 80px 10%;
+}
+
+.galeria h2{
+    font-family: var(--fonte-titulo);
+    font-size: 3rem;
+    color: var(--cor-verde);
+    margin-bottom: 40px;
+}
+
+.galeria-grid{
+    display: flex;
+    gap: 25px;
+}
+
+.galeria-grid > img{
+    width: 45%;
+    height: 1060px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.galeria-lado{
+    width: 60%;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.galeria-lado img{
+    width: 100%;
+    height: 530px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+/*-------------------------------section:LOCALIZAÇÃO---------------------------------------*/
+
+/*------------------------------------------mapa-------------------------*/
+
+
+.section-localizacao {
+    background-color: var(--cor-fundo); /* Ou var(--cor-fundo-secundario) */
+    width: 100%;
+    padding: 80px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mapa-container {
+    width: 90%;
+    max-width: 1200px; /* Alinha perfeitamente com a largura dos seus outros blocos */
+    margin: 0 auto;
+    border-radius: 15px; /* Deixa as bordas arredondadas como os cards e fotos da galeria */
+    overflow: hidden; /* Garante que o mapa respeite o arredondamento das bordas */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Uma sombra sutil para dar profundidade */
+    border: 2px solid var(--cor-verde); /* Opcional: uma borda na cor do tema */
+}
+
+.mapa-container iframe {
+    display: block;
+    width: 100%;
+    height: 450px; /* Altura ideal na tela */
+}
+/*------------------------------------------fale conosco---------------------*/
+.section-fale {
+    background-color: var(--cor-texto); /* Certifique-se de que var(--cor-texto) é o tom escuro/marrom visto na imagem */
+    width: 100%;
+    padding: 100px 0;
+}
+
+.container-fale {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Alinha o topo do formulário com o topo do texto */
+    gap: 80px; /* Reduzido de 150px para evitar espremer os blocos */
+}
+
+.informacoes-fale {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espaçamento consistente sem precisar de <br> */
+}
+
+.subtitulo-fale {
+    color: var(--cor-dourado-claro);
+    font-family: var(--fonte-titulo);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.t-faleconosco {
+    color: var(--cor-fundo-secundario);
+    font-family: var(--fonte-titulo);
+    font-size: 56px; /* Reduzido de 80px para quebrar melhor as linhas */
+    line-height: 1.15;
+    font-weight: bold;
+}
+
+.p-faleconosco {
+    color: var(--cor-branco);
+    font-family: var(--fonte-texto); /* Geralmente textos corridos usam fonte de texto, não de título */
+    font-size: 18px; /* Reduzido de 30px para ficar mais harmônico e legível */
+    line-height: 1.6;
+    max-width: 480px;
+}
+
+/* Container de contatos reformulado */
+.container-contatos {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.contato {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-align: left; /* Alinhado à esquerda fica muito mais profissional */
+}
+
+.icone-contato {
+    font-size: 24px;
+    background: rgba(255, 255, 255, 0.08); /* Um leve círculo de fundo para o emoji */
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.detalhe-contato p {
+    margin: 0;
+}
+
+.titulo-contato {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--cor-branco);
+}
+
+.info-contato {
+    font-size: 15px;
+    color: #ccc; /* Tom cinza claro para diferenciar do título */
+    margin-top: 2px;
+}
+.titulomapa{
+      color:var(--cor-marrom-claro);
+  font-family:var(--fonte-titulo);
+  font-size: 80px;
+ margin-left:40px ;
+ align-items: center;
+}
+/*-------------------------------------FORMULARIO----------------------------*/
+.formulario {
+    flex: 1; /* Permite que o formulário ocupe o espaço restante de forma fluida */
+    max-width: 550px; /* Evita que ele fique gigante em telas muito largas */
+    background: #F8F4EE;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Sombra sutil para dar profundidade */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.linha {
+    display: flex;
+    gap: 20px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.campo label {
+    font-family: var(--fonte-texto);
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #6D563C;
+    margin-bottom: 6px;
+    letter-spacing: 1.2px;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #D9CDBD;
+    border-radius: 8px;
+    background: #FFF;
+    font-family: var(--fonte-texto);
+    font-size: 16px; /* 20px estava um pouco grande para inputs de formulário */
+    color: #333;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    border-color: var(--cor-verde);
+    box-shadow: 0 0 0 3px rgba(var(--cor-verde-rgb), 0.1); /* Efeito suave de foco */
+}
+
+.campo textarea {
+    min-height: 120px;
+    resize: vertical; /* Permite redimensionar apenas na vertical se o usuário quiser */
+}
+
+.btn-formulario {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 8px;
+    background: var(--cor-verde);
+    color: #fff;
+    font-family: var(--fonte-texto);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.1s ease;
+}
+
+.btn-formulario:hover {
+    background: var(--cor-verde-escuro);
+}
+
+.btn-formulario:active {
+    transform: scale(0.98); /* Pequeno efeito de clique */
+}
+
+
+
+/*-------------------------------FOOTER-------------------------------------*/
+/*================ FOOTER ================*/
+
+footer{
+
+    background: var(--cor-borda);
+    color:var(--cor-preto);
+
+}
+
+.footer-container{
+
+    width: 35%;
+    margin: auto;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+
+    gap:70px;
+
+    padding:70px 0;
+
+}
+
+.footer-col{
+
+    flex:1;
+
+}
+
+.logo-footer{
+
+    max-width:280px;
+
+}
+
+.logo-img{
+
+    width:170px;
+    margin-bottom:20px;
+
+}
+
+.logo-footer p{
+
+    color:var(--cor-preto);
+    line-height:1.7;
+    font-size:15px;
+    margin-bottom:25px;
+
+}
+
+.footer-col h3{
+
+    color:var(--cor-verde-escuro);
+    font-size:14px;
+    letter-spacing:2px;
+    margin-bottom:25px;
+
+}
+
+.footer-col ul{
+
+    list-style:none;
+
+}
+
+.footer-col li{
+
+    margin-bottom:14px;
+
+}
+
+.footer-col a{
+
+    color:var(--cor-preto);
+    text-decoration:none;
+    transition:.3s;
+
+}
+
+.footer-col a:hover{
+
+    color:var(--cor-verde-claro);
+
+}
+
+.redes{
+
+    display:flex;
+    gap:15px;
+
+}
+
+.redes img{
+
+    width:58px;
+    height:58px;
+    padding:8px;
+
+    border:1px solid var(--cor-verde);
+    border-radius:8px;
+    border-color:var(--cor-dourado-escuro);
+
+    cursor:pointer;
+    transition:.3s;
+
+}
+
+.redes img:hover{
+
+    background:var(--cor-verde-claro);
+
+}
+
+.footer-bottom{
+
+    border-top:1px solid var(--cor-verde-claro);
+
+    width:85%;
+    margin:auto;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 0;
+
+    color:var(--cor-texto);
+    font-size:14px;
+
+}
+
+/*-------------------------------------RESPONSIVIDADE----------------------------*/
+/*=================== TABLETS ===================*/
+
+@media (max-width:1024px){
+
+    .menu{
+        gap:12px;
+    }
+
+    .menu a{
+        font-size:16px;
+    }
+
+    .tituloprincipal{
+        font-size:60px;
+    }
+
+    .tituloprincipalhero,
+    .titulo-vantagens,
+    .titulogaleria,
+    .t-faleconosco,
+    .titulomapa{
+        font-size:45px;
+    }
+
+    .section-historia{
+        gap:30px;
+    }
+
+}
+/*=================== CELULARES ===================*/
+
+@media (max-width:768px){
+
+/* MENU */
+
+.header-container{
+    padding:15px;
+}
+
+.navbar{
+    flex-direction:column;
+    gap:20px;
+}
+
+.menu{
+    flex-direction:column;
+    gap:15px;
+}
+
+/* HERO */
+
+.hero{
+    min-height:500px;
+}
+
+.tituloprincipal{
+    font-size:42px;
+}
+
+.paragrafo{
+    font-size:18px;
+}
+
+.botoeshero{
+    flex-direction:column;
+    align-items:center;
+}
+
+/* HISTÓRIA */
+
+.section-historia{
+
+    flex-direction:column;
+
+}
+
+.historia-imagem img{
+    width:100%;
+}
+
+/* GALERIA */
+
+.galeria-grid{
+
+    flex-direction:column;
+
+}
+
+.galeria-grid > img{
+
+    width:100%;
+    height:350px;
+
+}
+
+.galeria-lado{
+
+    width:100%;
+
+}
+
+.galeria-lado img{
+
+    height:250px;
+
+}
+
+/* FOOTER */
+
+.footer-container{
+
+    width:90%;
+    flex-direction:column;
+    text-align:center;
+    gap:40px;
+
+}
+
+.logo-footer{
+
+    max-width:100%;
+
+}
+
+.redes{
+
+    justify-content:center;
+
+}
+
+.footer-bottom{
+
+    flex-direction:column;
+    gap:15px;
+    text-align:center;
+
+}
+
+}
